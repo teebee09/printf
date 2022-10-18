@@ -57,7 +57,7 @@ int _printf(const char *format, ...)
 			cprint++;
 			i++;
 		}
-		if (format[i] = '\0')
+		if (format[i] == '\0')
 			return (cpint);
 		f = find_function(&format[i + 1]);
 		if (f != NULL)

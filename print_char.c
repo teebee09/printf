@@ -18,8 +18,8 @@ int print_char(va_list c)
 }
 
 /**
- * print_modulus - %
- * return: return 1
+ * print_modulus - fncs prints %
+ * Return: return 1
  */
 
 int print_modulus(void)
