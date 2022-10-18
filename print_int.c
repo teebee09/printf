@@ -11,7 +11,7 @@ int print_int(va_list i)
 {
 	int length, pow_ten, j, digit, n, count = 0, num;
 
-	n = va_arg(d, int);
+	n = va_arg(i, int);
 	if (n != 0)
 	{
 		if (n < 0)
