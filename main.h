@@ -29,6 +29,7 @@ int print_X(va_list X);
 int print_reverse(va_list r);
 int print_rot13(va_list R);
 int print_bin(va_list b);
+int print_Str(va_list S);
 
 
 #endif /* MAIN_H */
