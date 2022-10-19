@@ -1,24 +1,20 @@
 #include "main.h"
 
 /**
- * print_decimal - fncs that can print a decimal
- * @d: the integer to print
+ * print_unsigned - fncs that can print an unsigned int
+ * @u: the unsigned integer to print
  * Descriptions: prints digit with _putchar
  * Return: return size of output text
  */
 
-int print_decimal(va_list d)
+int print_unsigned(va_list u)
 {
-	int length, pow_ten, j, digit, n, count = 0, num;
+	unsigned int length, pow_ten, j, digit, n, num;
+	int count = 0;
 
-	n = va_arg(d, int);
+	n = va_arg(u, unsigned int);
 	if (n != 0)
 	{
-		if (n < 0)
-		{
-			_putchar('-');
-			count++;
-		}
 		num = n;
 		length = 0;
 		while (num != 0)
@@ -32,10 +28,7 @@ int print_decimal(va_list d)
 		for (j = 1; j <= length; j++)
 		{
 			digit = n / pow_ten;
-			if (n < 0)
-				_putchar((digit * -1) + 48);
-			else
-				_putchar(digit + '0');
+			_putchar(digit + '0');
 			count++;
 			n -= digit * pow_ten;
 			pow_ten /= 10;

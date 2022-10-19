@@ -1,5 +1,7 @@
 #include "main.h"
 #include <unistd.h>
+#include <stdarg.h>
+
 /**
  * find_function - function that finds formats for _printf
  * calls the corresponding function.
@@ -14,10 +16,10 @@ int (*find_function(const char *format))(va_list)
 		{"c", print_char},
 		{"s", print_string},
 		{"i", print_int},
-		{"d", print_dec},
-		{"r", print_rev},
+		{"d", print_decimal},
+		{"r", print_reverse},
 		{"b", print_bin},
-		{"u", print_unsig},
+		{"u", print_unsigned},
 		{"o", print_octal},
 		{"x", print_x},
 		{"X", print_X},
@@ -58,7 +60,7 @@ int _printf(const char *format, ...)
 			i++;
 		}
 		if (format[i] == '\0')
-			return (cpint);
+			return (cprint);
 		f = find_function(&format[i + 1]);
 		if (f != NULL)
 		{

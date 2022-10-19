@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_int - fncs that can print a decimal
+ * print_int - fncs that can print an integer
  * @i: the integer to print
  * Descriptions: prints digit with _putchar
  * Return: return size of output text
@@ -27,9 +27,9 @@ int print_int(va_list i)
 			length++;
 		}
 		pow_ten = 1;
-		for (j = 1; j <= len - 1; j++)
+		for (j = 1; j <= length - 1; j++)
 			pow_ten *= 10;
-		for (j = 1; j <= len; j++)
+		for (j = 1; j <= length; j++)
 		{
 			digit = n / pow_ten;
 			if (n < 0)
