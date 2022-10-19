@@ -10,7 +10,7 @@
 
 int print_hex(unsigned int n, unsigned int c)
 {
-	unsigned int length, pow_ten, j, digit, n, num;
+	unsigned int length, pow_ten, j, digit, num;
 	int count = 0;
 	char diff;
 
