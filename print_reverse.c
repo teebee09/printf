@@ -19,7 +19,7 @@ int print_reverse(va_list r)
 		;
 	for (i -= 1; i >= 0; i--)
 	{
-		_putchar(st[i]);
+		_putchar(str[i]);
 		j++;
 	}
 	return (j);

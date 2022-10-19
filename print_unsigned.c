@@ -23,9 +23,9 @@ int print_unsigned(va_list u)
 			length++;
 		}
 		pow_ten = 1;
-		for (j = 1; j <= len - 1; j++)
+		for (j = 1; j <= length - 1; j++)
 			pow_ten *= 10;
-		for (j = 1; j <= len; j++)
+		for (j = 1; j <= length; j++)
 		{
 			digit = n / pow_ten;
 			_putchar(digit + '0');

@@ -23,9 +23,9 @@ int print_octal(va_list o)
 			length++;
 		}
 		pow_ten = 1;
-		for (j = 1; j <= len - 1; j++)
+		for (j = 1; j <= length - 1; j++)
 			pow_ten *= 8;
-		for (j = 1; j <= len; j++)
+		for (j = 1; j <= length; j++)
 		{
 			digit = n / pow_ten;
 			_putchar(digit + '0');
