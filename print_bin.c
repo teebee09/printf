@@ -11,30 +11,35 @@
 
 int print_bin(va_list b)
 {
-	unsigned int bin = va_arg(b, unsigned int);
-	int count = 0, i = 0;
-	unsigned int t[31];
+	unsigned int size, bin, i, j, n, num;
+	int count = 0;
 
-	if (b == NULL)
+	n = va_arg(b, unsigned int);
+	if (n != 0)
 	{
-		_putchar ('0');
-		count++;
+		num = n;
+		size = 0;
+		while (num != 0)
+		{
+			num /= 2;
+			size++;
+		}
+		bin = 1;
+		for (j = 1; j <= size - 1; j++)
+			bin *= 2;
+		for (j = 1; j <= size; j++)
+		{
+			i = n / bin;
+			_putchar(i + '0');
+			count++;
+			n -= i * bin;
+			bin /= 2;
+		}
 	}
 	else
 	{
-		while (b)
-		{
-			t[i] = (b % 2);
-			b /= 2;
-			i++;
-		}
-		i--;
-		while (i >= 0)
-		{
-			_putchar(t[i] + '0');
-			i--;
-			count++;
-		}
+		_putchar('0');
+		return (1);
 	}
 	return (count);
 }
