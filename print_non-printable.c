@@ -3,13 +3,13 @@
 #include <stdio.h>
 
 /**
- * print_Str - prints a string
- * @S: address to the string
+ * print_nonprintable - prints a string with non printable characters
+ * @S: address to the non printable string
  *
  * Return: an integer
  */
 
-int print_Str(va_list S)
+int print_nonprintable(va_list S)
 {
 	char *string = va_arg(S, char *);
 	int i = 0;
@@ -18,5 +18,6 @@ int print_Str(va_list S)
 		string = "(null)";
 	for (; string[i]; i++)
 		_putchar(string[i]);
+
 	return (i);
 }
