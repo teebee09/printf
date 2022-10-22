@@ -3,6 +3,7 @@
 
 #include <stdarg.h>
 #include <stdlib.h>
+#include <stddef.h>
 
 /*SIZE*/
 #define S_LONG 2
