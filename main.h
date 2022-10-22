@@ -35,7 +35,7 @@ int print_X(va_list X);
 int print_reverse(va_list r);
 int print_rot13(va_list R);
 int print_bin(va_list b);
-int print_Str(va_list S);
+int print_nonprintable(va_list S);
 int print_size(const char *format, int *i);
 int print_handlers(const char *fmt, int *ind, va_list list, char buffer[],
 		int flags, int width, int precision, int size);
