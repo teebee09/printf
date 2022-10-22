@@ -1,9 +1,9 @@
-#include <unistd.h>
+#include "main.h"
 
 /**
- * _putchar - fncs that prints a the character of a string
- * @c: the character to print/check
- * Return: return 1 on Success
+ * _putchar - write the character c to stdout
+ * @c: character to check
+ * Return: return 0
  */
 
 int _putchar(char c)
