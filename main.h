@@ -3,10 +3,15 @@
 
 #include <stdarg.h>
 #include <stdlib.h>
+#include <stddef.h>
 #include <unistd.h>
 
 #define UNUSED(x) (void)(x)
+<<<<<<< HEAD
 #define BUFF_SIZE 1024
+=======
+
+>>>>>>> 1e4e7b78964472f62448fb2331969b0d0fb57758
 
 /* FLAGS */
 #define F_MINUS 1
@@ -49,6 +54,7 @@ int print_nonprintable(va_list S);
 int print_size(const char *format, int *i);
 int print_handlers(const char *fmt, int *ind, va_list list, char buffer[],
 		int flags, int width, int precision, int size);
+<<<<<<< HEAD
 int print_pointer(va_list types, char buffer[],
 		int flags, int width, int precision, int size);
 
@@ -56,4 +62,17 @@ int print_pointer(va_list types, char buffer[],
 /* UTILS*/
 int is_digit(char);
 
+=======
+int get_precision(const char *format, int *i, va_list list)
+int get_flags(const char *format, int *i)
+	
+>>>>>>> 1e4e7b78964472f62448fb2331969b0d0fb57758
 #endif /* MAIN_H */
+
+
+
+
+
+
+
+
